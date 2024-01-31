@@ -8,7 +8,7 @@ export const data=[
         paragraph:"FastAPI + React",
         image:fashions,
         github:"",
-        live:"<p> This app is under construction </p>",
+        live:"",
     },
     {
         id:2,
