@@ -8,7 +8,7 @@ export const data=[
         paragraph:"FastAPI + React",
         image:fashions,
         github:"",
-        live:"",
+        live:"<p> This app is under construction </p>",
     },
     {
         id:2,
@@ -16,7 +16,7 @@ export const data=[
         paragraph:"React",
         image:rf,
         github:"",
-        live:"",
+        live:"https://pet-kingdom-project.netlify.app/",
     },
 
 
