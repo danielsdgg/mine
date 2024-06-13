@@ -22,10 +22,10 @@ export const data=[
     {
         id:3,
         name:"Fashions App",
-        paragraph:"Still in progress",
+        paragraph:"Work in progress",
         image:fashions,
         github:"",
-        live:"https://github.com/danielsdgg/fashions.git",
+        live:"https://github.com/danielsdgg/Fashions-App.git",
     },
 
 
