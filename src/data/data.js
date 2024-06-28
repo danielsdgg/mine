@@ -1,5 +1,4 @@
 import fashions from '../assets/original.jpg';
-import rf from '../assets/react.jpg';
 import rs from '../assets/nyumbaa.png'
 
 export const data=[
@@ -10,14 +9,6 @@ export const data=[
         image:rs,
         github:"",
         live:"https://gethomes.netlify.app/",
-    },
-    {
-        id:2,
-        name:"React JS Application",
-        paragraph:"Fetching data from db.json file",
-        image:rf,
-        github:"",
-        live:"https://pet-kingdom-project.netlify.app/",
     },
     {
         id:3,

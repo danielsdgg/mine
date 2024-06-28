@@ -9,7 +9,7 @@ const Work = () => {
     //setProject(data);
   
   return (
-    <div name='work' className='w-full md:h-screen text-gray-300 bg-[#0a192f] pt-40'>
+    <div name='work' className='w-full md:h-screen text-gray-300 bg-green-900 pt-40'>
       <div className='max-w-[1000px] mx-auto p-2 flex flex-col justify-center w-full h-full'>
         <div className='pb-8 md:pt-8'>
           <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-blue-600'>

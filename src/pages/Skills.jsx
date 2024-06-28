@@ -1,5 +1,4 @@
 import React from 'react';
-
 import HTML from '../assets/html.png';
 import CSS from '../assets/CSS.png';
 import JavaScript from '../assets/JavaScript.png';
@@ -56,7 +55,7 @@ const Skills = () => {
               </div>
               <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                   <img className='w-20 mx-auto' src={Tailwind} alt="angular icon" />
-                  <p className='my-4'>Tailwind</p>
+                  <p className='my-4'>Tailwindcss</p>
               </div>
               <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                   <img className='w-20 mx-auto' src={GitHub} alt="typescript icon" />
