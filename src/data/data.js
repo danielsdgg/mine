@@ -12,11 +12,11 @@ export const data=[
     },
     {
         id:3,
-        name:"Fashions App",
-        paragraph:"Work in progress",
+        name:"Alpha-Homes",
+        paragraph:"Flask + React",
         image:fashions,
         github:"",
-        live:"https://github.com/danielsdgg/Fashions-App.git",
+        live:"https://final-projects-huib.onrender.com/",
     },
 
 
