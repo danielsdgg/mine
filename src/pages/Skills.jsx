@@ -2,66 +2,76 @@ import React from 'react';
 import HTML from '../assets/html.png';
 import CSS from '../assets/CSS.png';
 import JavaScript from '../assets/JavaScript.png';
-import ReactImg from '../assets/react.jpg';
+import ReactImg from '../assets/images.png';
 import Node from '../assets/nodejs.jpg';
 import FastApi from '../assets/FastAPI.png';
 import GitHub from '../assets/github.png';
 import Tailwind from '../assets/tailwind.png';
 import Flask from '../assets/flask.png';
-import Type from '../assets/type.png'
+import Type from '../assets/type.png';
+import Python from '../assets/python-programming-language.webp'
 
 const Skills = () => {
   return (
-    <div name='skills' className='w-full h-screen bg-[#0a192f] text-gray-300'>
+    <div name="skills" className="w-full min-h-screen bg-gradient-to-r from-blue-500 via-purple-200 to-blue-500 text-gray-300 py-16">
       {/* Container */}
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
-          <div>
-              <p className='text-4xl font-bold inline border-b-4 border-blue-600 '>Skills</p>
-              <p className='py-4'> These are the technologies I've worked with</p>
-          </div>
+      <div className="max-w-[1200px] mx-auto p-6 flex flex-col justify-center w-full h-full">
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <p className="text-blue-600 text-4xl font-bold inline border-b-4 border-blue-600">
+            Skills
+          </p>
+          <p className="py-4 text-xl text-black">These are the technologies I've worked with</p>
+        </div>
 
-          <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={HTML} alt="HTML icon" />
-                  <p className='my-4'>Html</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={CSS} alt="css icon" />
-                  <p className='my-4'>Css</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={JavaScript} alt="js icon" />
-                  <p className='my-4'>Javascript</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={ReactImg} alt="react icon" />
-                  <p className='my-4'>React</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={Type} alt="git icon" />
-                  <p className='my-4'>TypeScript</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={Node} alt="node icon" />
-                  <p className='my-4'>Node Js</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={Flask} alt="flask icon" />
-                  <p className='my-4'>Flask</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={FastApi} alt="fastapi icon" />
-                  <p className='my-4'>FastAPI</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={Tailwind} alt="angular icon" />
-                  <p className='my-4'>Tailwindcss</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={GitHub} alt="typescript icon" />
-                  <p className='my-4'>Github</p>
-              </div>
+        {/* Skills Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-8 text-center">
+          {/* Skill Item */}
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={HTML} alt="HTML icon" />
+            <p className="mt-4 text-lg font-semibold">HTML</p>
           </div>
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={CSS} alt="CSS icon" />
+            <p className="mt-4 text-lg font-semibold">CSS</p>
+          </div>
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={JavaScript} alt="JavaScript icon" />
+            <p className="mt-4 text-lg font-semibold">JavaScript</p>
+          </div>
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={ReactImg} alt="React icon" />
+            <p className="mt-4 text-lg font-semibold">React</p>
+          </div>
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={Type} alt="TypeScript icon" />
+            <p className="mt-4 text-lg font-semibold">TypeScript</p>
+          </div>
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={Node} alt="Node.js icon" />
+            <p className="mt-4 text-lg font-semibold">Node</p>
+          </div>
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={Flask} alt="Flask icon" />
+            <p className="mt-4 text-lg font-semibold">Flask</p>
+          </div>
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={FastApi} alt="FastAPI icon" />
+            <p className="mt-4 text-lg font-semibold">FastAPI</p>
+          </div>
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={Tailwind} alt="TailwindCSS icon" />
+            <p className="mt-4 text-lg font-semibold">TailwindCSS</p>
+          </div>
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={GitHub} alt="GitHub icon" />
+            <p className="mt-4 text-lg font-semibold">GitHub</p>
+          </div>
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={Python} alt="GitHub icon" />
+            <p className="mt-4 text-lg font-semibold">Python</p>
+          </div>
+        </div>
       </div>
     </div>
   );

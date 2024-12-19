@@ -1,30 +1,30 @@
 import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
-import { Link } from 'react-scroll'
+import { Link } from 'react-scroll';
+
 const Home = () => {
   return (
-    <div name='home' className='w-full h-screen bg-[#0a192f]'>
-      {/* Container */}
-      <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-        <p className='text-blue-600'>Hello, my name is</p>
-        <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>
+    <div name="home" className="w-full h-screen bg-gradient-to-r from-blue-500 via-purple-200 to-blue-500 flex items-center justify-center">
+      <div className="text-center text-white px-8">
+        {/* Intro Text */}
+        <p className="text-lg sm:text-xl font-semibold text-blue-500 mb-2">Hello, my name is</p>
+        <h1 className="text-4xl sm:text-6xl font-extrabold mb-4">
           Daniel Muiruri
         </h1>
-        <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>
-          I'm a Full Stack Developer.
+        <h2 className="text-3xl sm:text-5xl font-semibold text-black mb-6">
+          I'm a Full Stack Developer
         </h2>
-        <p className='text-[#8892b0] py-4 max-w-[700px]'>
-          I’m specializing in building (and occasionally
-          designing) exceptional digital experiences. Currently, I’m focused on
-          building responsive web applications. With my hardwork and determination, I am able to achieve the desired outcomes.
+        <p className="text-lg sm:text-xl text-black max-w-2xl mx-auto mb-8">
+          I specialize in building exceptional digital experiences using technologies like React, Flask, and Tailwind CSS. Let's bring your ideas to life with clean, efficient, and user-centered designs.
         </p>
-        <div>
-          <Link to={'work'}>
-            <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-blue-600 hover:border-blue-600'>
+        <div className="flex justify-center">
+          {/* Call to Action Button */}
+          <Link to="work" smooth={true} duration={500}>
+            <button className="text-white bg-blue-500 border-2 border-blue-500 px-8 py-4 rounded-lg text-lg font-semibold transition-all hover:bg-transparent hover:text-blue-500 hover:border-blue-600 flex items-center">
               View Work
-            <span className='group-hover:rotate-90 duration-300'>
-              <HiArrowNarrowRight className='ml-3 ' />
-            </span>
+              <span className="ml-3 transform group-hover:rotate-90 duration-300">
+                <HiArrowNarrowRight />
+              </span>
             </button>
           </Link>
         </div>

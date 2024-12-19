@@ -1,57 +1,103 @@
-import React, { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Contacts = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const [notification, setNotification] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
     });
-  }, []);
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    // Implement email sending logic here
+    setNotification('Thank you for reaching out! I will get back to you as soon as possible.');
+    setFormData({ name: '', email: '', message: '' }); // Reset form
+  };
 
   return (
-    <div name='contact' className='w-full h-screen bg-[#0a192f] flex justify-center items-center p-4'>
-      <form
-        method='POST'
-        action='https://getform.io/f/18381752-9c4d-4b0a-80f5-92fcd2c3c828'
-        className='flex flex-col max-w-[600px] w-full'
+    <div name="contact" className="w-full h-screen bg-gradient-to-r from-blue-500 via-purple-200 to-blue-500 flex justify-center items-center p-4">
+      <motion.div
+        className="w-full max-w-[600px] bg-white p-8 rounded-lg shadow-lg"
+        initial={{ opacity: 0, x: 50 }} // Initial state
+        animate={{ opacity: 1, x: 0 }} // Final state
+        transition={{ duration: 0.5 }} // Animation duration
       >
-        <div className='pb-8' data-aos='fade-down'>
-          <p className='text-4xl font-bold inline border-b-4 border-blue-600 text-gray-300'>Contact</p>
-          <p className='text-gray-300 py-4'> To reach me, submit the form below or shoot me an email - gathigidg26@gmail.com</p>
+        <div className="pb-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">Get in Touch</h2>
+          <p className="text-gray-600">
+            To contact us, please fill out the form below or send an email to{' '}
+            <a href="mailto:morgantechnical72@gmail.com" className="text-blue-500">
+              morgantechnical72@gmail.com
+            </a>
+            .
+          </p>
         </div>
-        <input
-          className='bg-[#ccd6f6] p-2'
-          type='text'
-          placeholder='Name'
-          name='name'
-          data-aos='fade-up'
-          data-aos-delay='100'
-        />
-        <input
-          className='my-4 p-2 bg-[#ccd6f6]'
-          type='email'
-          placeholder='Email or Tel'
-          name='email'
-          data-aos='fade-up'
-          data-aos-delay='200'
-        />
-        <textarea
-          className='bg-[#ccd6f6] p-2'
-          name='message'
-          rows='10'
-          placeholder='Message'
-          data-aos='fade-up'
-          data-aos-delay='300'
-        ></textarea>
-        <button
-          className='text-white border-2 hover:bg-blue-600 hover:border-blue-600 px-4 py-3 my-8 mx-auto flex items-center'
-          data-aos='fade-up'
-          data-aos-delay='400'
-        >
-          Submit
-        </button>
-      </form>
+
+        {/* Notification Section */}
+        {notification && (
+          <div className="mb-4 p-4 text-center bg-green-100 text-green-800 rounded-lg">
+            {notification}
+          </div>
+        )}
+
+        <form onSubmit={sendEmail}>
+          <div className="mb-6">
+            <label className="block text-gray-700">Name</label>
+            <input
+              className="w-full p-2 mt-1 border border-gray-300 rounded"
+              type="text"
+              placeholder="Your Name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="mb-6">
+            <label className="block text-gray-700">Email</label>
+            <input
+              className="w-full p-2 mt-1 border border-gray-300 rounded"
+              type="email"
+              placeholder="...@gmail.com"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="mb-6">
+            <label className="block text-gray-700">Message</label>
+            <textarea
+              className="w-full p-2 mt-1 border border-gray-300 rounded"
+              name="message"
+              placeholder="Your Message"
+              rows={4}
+              value={formData.message}
+              onChange={handleChange}
+            ></textarea>
+          </div>
+
+          <div className="text-center">
+            <button
+              type="submit"
+              className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition"
+            >
+              Send
+            </button>
+          </div>
+        </form>
+      </motion.div>
     </div>
   );
 };
