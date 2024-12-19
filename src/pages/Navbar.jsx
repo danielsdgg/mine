@@ -22,7 +22,7 @@ const Navbar = () => {
           alt='Personal Avatar' 
           className='w-10 h-10 rounded-full' // Circle avatar style
         />
-        <p className='text-2xl font-bold'>DM</p> {/* Optional text next to the image */}
+        <p className='text-2xl font-bold'>DANIEL</p> {/* Optional text next to the image */}
       </div>
 
       {/* Menu */}
