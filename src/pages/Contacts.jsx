@@ -36,9 +36,9 @@ const Contacts = () => {
         <div className="pb-8 text-center">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">Get in Touch</h2>
           <p className="text-gray-600">
-            To contact us, please fill out the form below or send an email to{' '}
-            <a href="mailto:morgantechnical72@gmail.com" className="text-blue-500">
-              morgantechnical72@gmail.com
+            To contact me, please fill out the form below or send an email to{' '}
+            <a href="mailto:gathigidg26@gmail.com" className="text-blue-500">
+              gathigidg26@gmail.com
             </a>
             .
           </p>
