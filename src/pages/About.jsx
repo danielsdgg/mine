@@ -31,7 +31,7 @@ const About = () => {
           {/* Content */}
           <div className="mt-20 md:mt-0 flex-1 pl-0 md:pl-16">
             <h2 className="text-3xl md:text-4xl font-semibold text-center mb-6">
-              Hi! I'm Daniel Muiruri
+              Hi! Nice to meet you
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
               I'm a passionate software developer with expertise in creating
