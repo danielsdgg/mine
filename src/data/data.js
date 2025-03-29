@@ -5,10 +5,10 @@ export const data=[
     {
         id:1,
         name:"Morgan Technical Training",
-        paragraph:"React,emailjs",
+        paragraph:"Created using React",
         image:rs,
         github:"",
-        live:"https://morgantechnical.netlify.app/",
+        live:"https://morgantechnicaltraining.com/",
     },
     {
         id:3,
