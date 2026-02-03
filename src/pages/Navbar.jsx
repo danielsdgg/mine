@@ -108,7 +108,7 @@ const Navbar = () => {
           </a>
         </li>
         <li className='py-6 text-3xl'>
-          <a href='https://drive.google.com/file/d/1BoGa9k4uKu9zyu5GSbGyPZYCDSJ_tiWB/view?usp=sharing' className='text-white'>
+          <a href='https://drive.google.com/file/d/13bzX4w8KEN-lgbB2Z7H-PDityj3RASwe/view?usp=sharing' className='text-white'>
             <BsFillPersonLinesFill size={30} />
           </a>
         </li>
