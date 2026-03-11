@@ -1,14 +1,14 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
-import { BsDownload, BsArrowUp } from 'react-icons/bs';
+import { BsDownload } from 'react-icons/bs';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+//   const scrollToTop = () => {
+//     window.scrollTo({ top: 0, behavior: 'smooth' });
+//   };
 
   return (
     <footer className="w-full bg-white text-slate-800 border-t border-slate-200 relative">
@@ -73,13 +73,13 @@ const Footer = () => {
       </div>
 
       {/* Back to Top – floating, elegant */}
-      <button
+      {/* <button
         onClick={scrollToTop}
         className="fixed bottom-8 right-8 z-50 bg-indigo-600 text-white p-4 rounded-full shadow-lg hover:bg-indigo-700 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
         aria-label="Back to top"
       >
         <BsArrowUp size={24} />
-      </button>
+      </button> */}
     </footer>
   );
 };
