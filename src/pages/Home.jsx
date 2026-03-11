@@ -1,7 +1,7 @@
 import React from "react";
 import { Link as ScrollLink } from 'react-scroll';
 import { HiArrowNarrowRight } from 'react-icons/hi';
-import { BsDownload } from 'react-icons/bs'; 
+import { BsDownload } from 'react-icons/bs';
 
 const Home = () => {
   return (
@@ -25,7 +25,7 @@ const Home = () => {
             I build clean, performant, user-focused web applications using React, Python (Flask), Java (Spring Boot), Tailwind CSS, and modern tools. Passionate about transforming ideas into reliable, scalable digital solutions that solve real-world problems.
           </p>
 
-          {/* CTA Buttons – side by side on desktop, stacked on mobile */}
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start pt-4">
             {/* Primary CTA: View Work */}
             <ScrollLink
@@ -40,10 +40,9 @@ const Home = () => {
               </button>
             </ScrollLink>
 
-            {/* Secondary CTA: Download Resume */}
             <a
-              href="/public/Daniel-Muiruri-Resume-2026.pdf"           
-              download="Daniel-Muiruri-Resume.pdf"
+              href="/Daniel-Muiruri-Resume-2026.pdf"  
+              download="Daniel-Muiruri-Resume-2026.pdf"  
               className="inline-block w-full sm:w-auto"
             >
               <button className="group w-full sm:w-auto bg-transparent text-white px-7 py-4 rounded-lg text-lg font-semibold border-2 border-slate-500 hover:border-slate-300 hover:bg-slate-800/50 transition-all duration-300 inline-flex items-center justify-center shadow-md hover:shadow-lg">
@@ -54,12 +53,12 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Right: Profile Photo Card – unchanged */}
+        {/* Right: Profile Photo Card */}
         <div className="relative flex justify-center md:justify-end mt-8 md:mt-0">
           <div className="relative">
             <img
               src="https://res.cloudinary.com/ddei3mzex/image/upload/v1712911719/1690452513365_gaum2x.jpg"
-              alt="Daniel Muiruri - Full Stack Developer"
+              alt="Daniel Muiruri - Software Developer"
               className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-slate-700 shadow-2xl shadow-black/50"
             />
             <div className="absolute -bottom-5 -right-5 sm:-bottom-6 sm:-right-6 bg-slate-800 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg font-medium text-sm sm:text-base border border-slate-600">

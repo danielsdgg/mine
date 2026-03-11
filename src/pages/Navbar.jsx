@@ -13,6 +13,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -36,6 +37,7 @@ const Navbar = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:h-20">
+
             {/* Logo + Avatar */}
             <div className="flex items-center gap-3">
               <img
@@ -43,6 +45,7 @@ const Navbar = () => {
                 alt="Daniel Muiruri"
                 className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border-2 border-indigo-500/40 shadow-sm flex-shrink-0"
               />
+
               <span className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
                 DANIEL
               </span>
@@ -72,8 +75,9 @@ const Navbar = () => {
               className="md:hidden text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-md p-1"
               aria-label="Toggle navigation menu"
             >
-              {nav ? <FaTimes size={28} /> : <FaBars size={28} />}
+              {nav ? <FaTimes size={30} /> : <FaBars size={28} />}
             </button>
+
           </div>
         </div>
       </nav>
@@ -84,22 +88,32 @@ const Navbar = () => {
           nav ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        {/* Backdrop (click to close) */}
+        {/* Backdrop */}
         <div
           className="absolute inset-0 bg-black/40 backdrop-blur-sm"
           onClick={handleClick}
         />
 
         {/* Drawer Panel */}
-        <div className="absolute right-0 top-0 h-full w-4/5 max-w-xs bg-white dark:bg-slate-900 shadow-2xl p-6 sm:p-8 flex flex-col">
-          <div className="flex justify-between items-center mb-10 sm:mb-12">
-            <span className="text-2xl font-bold text-slate-900 dark:text-white">Menu</span>
-            <button onClick={handleClick} aria-label="Close menu">
-              <FaTimes size={32} className="text-slate-700 dark:text-slate-300" />
+        <div className="absolute right-0 top-0 h-full w-4/5 max-w-xs bg-white dark:bg-slate-900 shadow-2xl flex flex-col">
+
+          {/* Header */}
+          <div className="flex items-center justify-between px-6 py-5 border-b border-slate-200 dark:border-slate-700">
+            <span className="text-xl font-semibold text-slate-900 dark:text-white">
+              
+            </span>
+
+            <button
+              onClick={handleClick}
+              aria-label="Close menu"
+              className="p-1 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800"
+            >
+              <FaTimes size={10} className="text-slate-700 dark:text-slate-300" />
             </button>
           </div>
 
-          <ul className="flex-1 flex flex-col justify-center items-center gap-10 sm:gap-12">
+          {/* Links */}
+          <ul className="flex flex-col px-6 py-8 gap-8">
             {navLinks.map((link) => (
               <li key={link.to}>
                 <ScrollLink
@@ -107,7 +121,7 @@ const Navbar = () => {
                   to={link.to}
                   smooth={true}
                   duration={500}
-                  className="text-3xl sm:text-4xl font-medium text-slate-800 dark:text-slate-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300"
+                  className="block text-xl font-medium text-slate-800 dark:text-slate-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300"
                 >
                   {link.label}
                 </ScrollLink>
@@ -115,7 +129,6 @@ const Navbar = () => {
             ))}
           </ul>
 
-          {/* Optional small note or future social icons here if you change mind */}
         </div>
       </div>
 

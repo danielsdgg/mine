@@ -1,90 +1,96 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { data } from "../data/data";
 
 const Work = () => {
   const projects = data;
-  const [filter, setFilter] = useState('All');
+  const [filter, setFilter] = useState("All");
 
-  const uniqueTech = ['All', ...new Set(projects.flatMap(p => p.tech || []))];
-  const filteredProjects = filter === 'All' 
-    ? projects 
-    : projects.filter(p => p.tech?.includes(filter));
+  const uniqueTech = ["All", ...new Set(projects.flatMap((p) => p.tech || []))];
+
+  const filteredProjects =
+    filter === "All"
+      ? projects
+      : projects.filter((p) => p.tech?.includes(filter));
 
   return (
-    <section 
-      name="work" 
-      className="w-full bg-gradient-to-b from-[#6F665C] to-[#8C8375] text-[#F5F2ED] py-20 md:py-28"
+    <section
+      name="work"
+      className="w-full py-24 bg-gradient-to-b from-slate-50 via-slate-100 to-slate-200 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#F5F2ED]">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             My Work
           </h2>
-          <div className="w-20 h-1 bg-[#A67C52] mx-auto mt-5 rounded-full opacity-80" />
-          <p className="mt-6 text-lg md:text-xl text-[#D9D2C9] max-w-3xl mx-auto leading-relaxed">
-            A curated showcase of full-stack applications, interactive tools, and thoughtful digital experiences I've crafted.
+
+          <div className="w-24 h-1 bg-indigo-600 mx-auto mt-5 rounded-full" />
+
+          <p className="mt-6 text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            A collection of applications and digital products I’ve built —
+            combining clean design, scalable architecture, and thoughtful user
+            experience.
           </p>
         </div>
 
-        {/* Filter Pills – muted warm accent */}
-        <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-12">
-          {uniqueTech.map(tech => (
+        {/* Filter Pills */}
+        <div className="flex flex-wrap justify-center gap-3 mb-14">
+          {uniqueTech.map((tech) => (
             <button
               key={tech}
               onClick={() => setFilter(tech)}
-              className={`
-                px-6 py-3 rounded-full text-sm md:text-base font-medium tracking-wide transition-all duration-300
-                ${filter === tech 
-                  ? 'bg-[#A67C52] text-[#F5F2ED] shadow-lg shadow-[#A67C52]/30 ring-1 ring-[#C19A6B]/40' 
-                  : 'bg-[#9A938A]/30 text-[#D9D2C9] border border-[#8C8375]/50 hover:border-[#A67C52]/60 hover:text-[#F5F2ED] hover:shadow-md backdrop-blur-sm'
-                }
-              `}
+              className={`px-5 py-2.5 text-sm md:text-base rounded-full transition-all duration-300 font-medium
+              ${
+                filter === tech
+                  ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/30"
+                  : "bg-white/60 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-700 hover:border-indigo-500 hover:text-indigo-600 backdrop-blur-sm"
+              }`}
             >
               {tech}
             </button>
           ))}
         </div>
 
-        {/* Masonry Grid – gallery-like */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 md:gap-8 space-y-6 md:space-y-8">
+        {/* Project Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="group break-inside-avoid rounded-2xl overflow-hidden bg-[#9A938A]/20 backdrop-blur-md border border-[#8C8375]/40 shadow-lg hover:shadow-2xl hover:border-[#A67C52]/50 transition-all duration-400"
+              className="group rounded-2xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-xl transition-all duration-500"
             >
-              {/* Image – warmer overlay */}
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-800 group-hover:scale-105"
+              {/* Image */}
+              <div className="relative overflow-hidden aspect-[4/3]">
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                   style={{ backgroundImage: `url(${project.image})` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#3C3732]/70 via-[#6F665C]/30 to-transparent group-hover:from-[#3C3732]/50 group-hover:via-[#6F665C]/10 transition-all duration-500" />
-                
-                {/* Hover reveal */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400">
-                  <span className="px-6 py-3 bg-[#A67C52]/90 text-[#F5F2ED] text-sm font-medium rounded-full shadow-lg backdrop-blur-md">
-                    Explore Project
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-70 group-hover:opacity-50 transition duration-500" />
+
+                {/* Hover Button */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                  <span className="px-6 py-3 rounded-full bg-indigo-600 text-white text-sm font-medium shadow-lg">
+                    View Project
                   </span>
                 </div>
               </div>
 
               {/* Content */}
-              <div className="p-6 md:p-7">
-                <h3 className="text-xl md:text-2xl font-bold text-[#F5F2ED] mb-3 text-center md:text-left">
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">
                   {project.name}
                 </h3>
-                
-                <p className="text-sm md:text-base text-[#D9D2C9] mb-5 line-clamp-3 text-center md:text-left">
+
+                <p className="text-slate-600 dark:text-slate-300 text-sm mb-5 line-clamp-3">
                   {project.paragraph}
                 </p>
 
-                {/* Tech Badges – desaturated warm */}
-                <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-6">
-                  {project.tech?.map((t, idx) => (
+                {/* Tech Tags */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.tech?.map((t, i) => (
                     <span
-                      key={idx}
-                      className="px-3.5 py-1 bg-[#A67C52]/20 text-[#F5F2ED] text-xs font-medium rounded-full border border-[#A67C52]/30"
+                      key={i}
+                      className="px-3 py-1 text-xs rounded-full bg-indigo-50 text-indigo-600 dark:bg-indigo-900/40 dark:text-indigo-300"
                     >
                       {t}
                     </span>
@@ -92,25 +98,26 @@ const Work = () => {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                <div className="flex gap-3">
                   {project.github && (
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-6 py-3 bg-[#3C3732]/80 hover:bg-[#4A443D] text-[#F5F2ED] text-sm font-medium rounded-lg transition-colors border border-[#4A443D]"
+                      className="px-5 py-2.5 text-sm rounded-lg border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:border-indigo-500 hover:text-indigo-600 transition"
                     >
-                      View Code
+                      Code
                     </a>
                   )}
+
                   {project.live && (
                     <a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-6 py-3 bg-[#A67C52] hover:bg-[#B5895A] text-[#F5F2ED] text-sm font-medium rounded-lg transition-colors shadow-md shadow-[#A67C52]/20"
+                      className="px-5 py-2.5 text-sm rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition shadow-md"
                     >
-                      Live Preview
+                      Live Demo
                     </a>
                   )}
                 </div>
@@ -119,9 +126,10 @@ const Work = () => {
           ))}
         </div>
 
+        {/* Empty state */}
         {filteredProjects.length === 0 && (
-          <p className="text-center text-[#D9D2C9] mt-16 text-lg">
-            No projects match this filter — more work coming soon.
+          <p className="text-center text-slate-600 dark:text-slate-300 mt-16 text-lg">
+            No projects match this filter yet.
           </p>
         )}
       </div>
