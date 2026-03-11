@@ -22,7 +22,7 @@ const Navbar = () => {
     { to: 'home', label: 'Home' },
     { to: 'skills', label: 'Skills' },
     { to: 'work', label: 'Work' },
-    { to: 'contact', label: 'Contact' },
+    { to: 'contacts', label: 'Contact' },
   ];
 
   return (
