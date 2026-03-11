@@ -9,68 +9,51 @@ import GitHub from '../assets/github.png';
 import Tailwind from '../assets/tailwind.png';
 import Flask from '../assets/flask.png';
 import Type from '../assets/type.png';
-import Python from '../assets/python-programming-language.webp'
+import Python from '../assets/python-programming-language.webp';
 
 const Skills = () => {
+  const skills = [
+    { src: HTML, alt: 'HTML', name: 'HTML' },
+    { src: CSS, alt: 'CSS', name: 'CSS' },
+    { src: JavaScript, alt: 'JavaScript', name: 'JavaScript' },
+    { src: ReactImg, alt: 'React', name: 'React' },
+    { src: Type, alt: 'TypeScript', name: 'TypeScript' },
+    { src: Node, alt: 'Node.js', name: 'Node.js' },
+    { src: Flask, alt: 'Flask', name: 'Flask' },
+    { src: FastApi, alt: 'FastAPI', name: 'FastAPI' },
+    { src: Tailwind, alt: 'Tailwind CSS', name: 'Tailwind CSS' },
+    { src: GitHub, alt: 'GitHub', name: 'GitHub' },
+    { src: Python, alt: 'Python', name: 'Python' },
+  ];
+
   return (
-    <div name="skills" className="w-full min-h-screen bg-gradient-to-r from-blue-500 via-purple-200 to-blue-500 text-gray-300 py-16">
-      {/* Container */}
-      <div className="max-w-[1200px] mx-auto p-6 flex flex-col justify-center w-full h-full">
+    <div name="skills" className="w-full bg-white text-slate-900 py-16 md:py-20">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Heading */}
-        <div className="text-center mb-12">
-          <p className="text-blue-600 text-4xl font-bold inline border-b-4 border-blue-600">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
             Skills
-          </p>
-          <p className="py-4 text-xl text-black">These are the technologies I've worked with</p>
+          </h2>
+          <div className="w-16 h-1 bg-slate-900 mx-auto mt-4 rounded-full" />
         </div>
 
-        {/* Skills Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-8 text-center">
-          {/* Skill Item */}
-          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
-            <img className="w-24 mx-auto group-hover:opacity-80" src={HTML} alt="HTML icon" />
-            <p className="mt-4 text-lg font-semibold">HTML</p>
-          </div>
-          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
-            <img className="w-24 mx-auto group-hover:opacity-80" src={CSS} alt="CSS icon" />
-            <p className="mt-4 text-lg font-semibold">CSS</p>
-          </div>
-          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
-            <img className="w-24 mx-auto group-hover:opacity-80" src={JavaScript} alt="JavaScript icon" />
-            <p className="mt-4 text-lg font-semibold">JavaScript</p>
-          </div>
-          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
-            <img className="w-24 mx-auto group-hover:opacity-80" src={ReactImg} alt="React icon" />
-            <p className="mt-4 text-lg font-semibold">React</p>
-          </div>
-          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
-            <img className="w-24 mx-auto group-hover:opacity-80" src={Type} alt="TypeScript icon" />
-            <p className="mt-4 text-lg font-semibold">TypeScript</p>
-          </div>
-          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
-            <img className="w-24 mx-auto group-hover:opacity-80" src={Node} alt="Node.js icon" />
-            <p className="mt-4 text-lg font-semibold">Node</p>
-          </div>
-          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
-            <img className="w-24 mx-auto group-hover:opacity-80" src={Flask} alt="Flask icon" />
-            <p className="mt-4 text-lg font-semibold">Flask</p>
-          </div>
-          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
-            <img className="w-24 mx-auto group-hover:opacity-80" src={FastApi} alt="FastAPI icon" />
-            <p className="mt-4 text-lg font-semibold">FastAPI</p>
-          </div>
-          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
-            <img className="w-24 mx-auto group-hover:opacity-80" src={Tailwind} alt="TailwindCSS icon" />
-            <p className="mt-4 text-lg font-semibold">TailwindCSS</p>
-          </div>
-          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
-            <img className="w-24 mx-auto group-hover:opacity-80" src={GitHub} alt="GitHub icon" />
-            <p className="mt-4 text-lg font-semibold">GitHub</p>
-          </div>
-          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
-            <img className="w-24 mx-auto group-hover:opacity-80" src={Python} alt="GitHub icon" />
-            <p className="mt-4 text-lg font-semibold">Python</p>
-          </div>
+        {/* Skills Grid - smaller, cleaner cards */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 md:gap-8">
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center p-4 md:p-6 bg-slate-50 border border-slate-200 rounded-xl hover:border-slate-400 transition-colors duration-200"
+            >
+              <img
+                src={skill.src}
+                alt={`${skill.alt} icon`}
+                className="w-16 h-16 md:w-20 md:h-20 object-contain mb-3 md:mb-4"
+              />
+              <p className="text-sm md:text-base font-medium text-slate-800 text-center">
+                {skill.name}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

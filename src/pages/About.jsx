@@ -1,13 +1,13 @@
 import React from "react";
 import { Element } from "react-scroll";
-import { Link as ScrollLink } from 'react-scroll'; // Corrected import for react-scroll
+import { Link as ScrollLink } from 'react-scroll'; 
 import { HiArrowNarrowRight } from 'react-icons/hi';
 
 const About = () => {
   return (
     <Element
       name="about"
-      className="w-full bg-gray-300 text-black py-20" // Retained the gray background here
+      className="w-full bg-gray-300 text-black py-20" 
     >
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Section Heading */}
