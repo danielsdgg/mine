@@ -64,7 +64,7 @@ const Contacts = () => {
 
   return (
     <section
-      name="contact"
+      name="contacts"
       className="relative w-full min-h-screen bg-slate-950 text-white overflow-hidden py-16 md:py-24"
     >
       {/* Subtle diagonal accent line */}
