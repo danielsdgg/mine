@@ -3,9 +3,9 @@ import { data } from "../data/data";
 
 const Work = () => {
   const projects = data;
-  const [filter, setFilter] = useState("All");
+  const [filter] = useState("All");
 
-  const uniqueTech = ["All", ...new Set(projects.flatMap((p) => p.tech || []))];
+  // const uniqueTech = ["All", ...new Set(projects.flatMap((p) => p.tech || []))];
 
   const filteredProjects =
     filter === "All"
@@ -34,7 +34,7 @@ const Work = () => {
         </div>
 
         {/* Filter Pills */}
-        <div className="flex flex-wrap justify-center gap-3 mb-14">
+        {/* <div className="flex flex-wrap justify-center gap-3 mb-14">
           {uniqueTech.map((tech) => (
             <button
               key={tech}
@@ -49,7 +49,7 @@ const Work = () => {
               {tech}
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* Project Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -66,13 +66,6 @@ const Work = () => {
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-70 group-hover:opacity-50 transition duration-500" />
-
-                {/* Hover Button */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-                  <span className="px-6 py-3 rounded-full bg-indigo-600 text-white text-sm font-medium shadow-lg">
-                    View Project
-                  </span>
-                </div>
               </div>
 
               {/* Content */}

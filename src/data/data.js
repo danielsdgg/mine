@@ -1,17 +1,17 @@
 import fashions from '../assets/original.jpg';
-// import rs from '../assets/crest.jpg';
+import rs from '../assets/Morgan@1.jpg';
 import insurance from '../assets/nyumbaa.png';
 
 export const data = [
-//   {
-//     id: 1,
-//     name: "Morgan Technical Training",
-//     paragraph: "Developed the online training platform for technical skills development.",
-//     image: rs,
-//     github: "https://github.com/danielsdgg/Morgantechnical.git", 
-//     live: "https://morgantechnicaltraining.com/",
-//     tech: ["React", "JavaScript", "CSS", "API Integration"], 
-//   },
+  {
+    id: 1,
+    name: "Morgan-LMS",
+    paragraph: "Developed a learning management system for Morgan Technical  Training that enhances remote learning with industry-ready skills.",
+    image: rs,
+    github: "https://github.com/danielsdgg/Morgantechnical.git", 
+    live: "https://canvas-1-mr06.onrender.com/",
+    tech: ["React", "Java (Spring Boot)", "MySQL", "Tailwind CSS", "API Integration"], 
+  },
   {
     id: 2,
     name: "Insurance Website",

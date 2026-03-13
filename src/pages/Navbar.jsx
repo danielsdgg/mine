@@ -61,7 +61,7 @@ const Navbar = () => {
                     duration={500}
                     spy={true}
                     activeClass="!text-indigo-600 font-semibold border-b-2 border-indigo-600 pb-1"
-                    className="text-slate-700 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 cursor-pointer text-base lg:text-lg"
+                    className="text-black dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 cursor-pointer text-base lg:text-lg"
                   >
                     {link.label}
                   </ScrollLink>
@@ -72,7 +72,7 @@ const Navbar = () => {
             {/* Mobile Hamburger */}
             <button
               onClick={handleClick}
-              className="md:hidden text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-md p-1"
+              className="md:hidden text-black dark:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-md p-1"
               aria-label="Toggle navigation menu"
             >
               {nav ? <FaTimes size={30} /> : <FaBars size={28} />}
