@@ -27,7 +27,7 @@ export const data = [
     paragraph: "E-commerce site with inventory management and payment integration. Used Flask for lightweight backend, optimizing for mobile-first design and fast performance.",
     image: fashions,
     github: "https://github.com/danielsdgg",
-    live: "https://github.com/danielsdgg",
+    live: "https://herocloth.vercel.app",
     tech: ["React", "Python (Flask)", "SQLite"],
   },
   // Add more here...
