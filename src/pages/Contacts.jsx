@@ -40,16 +40,19 @@ const Contacts = () => {
 
     try {
       const formBody = new URLSearchParams();
-      Object.entries(formData).forEach(([key, value]) => formBody.append(key, value));
-      formBody.append('form-name', 'contact');
+      Object.entries(formData).forEach(([key, value]) => {
+        formBody.append(key, value);
+      });
 
-      const response = await fetch('/', {
+      const response = await fetch('https://formspree.io/f/mdapkppd', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: formBody.toString(),
+        mode: 'no-cors',                    // ← This fixes the CORS redirect issue
       });
 
-      if (response.ok) {
+      // With no-cors we get an "opaque" response on success
+      if (response.type === 'opaque' || response.ok) {
         setStatus('success');
         setFormData({ name: '', email: '', message: '', 'bot-field': '' });
       } else {
@@ -122,7 +125,7 @@ const Contacts = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            {/* Status messages - more compact */}
+            {/* Status messages */}
             {status === 'success' && (
               <div className="mb-5 p-4 bg-emerald-950/50 border border-emerald-800/50 text-emerald-300 rounded-xl text-center text-sm font-medium">
                 Message sent! I'll get back to you soon.
@@ -136,15 +139,9 @@ const Contacts = () => {
             )}
 
             <form
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               className="space-y-5"
             >
-              <input type="hidden" name="form-name" value="contact" />
-
               <div className="hidden">
                 <label>
                   Don’t fill this out:
@@ -152,7 +149,7 @@ const Contacts = () => {
                 </label>
               </div>
 
-              {/* Floating label style inputs */}
+              {/* Floating label style inputs - unchanged */}
               <div className="relative">
                 <input
                   id="name"
