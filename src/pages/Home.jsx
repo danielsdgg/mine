@@ -57,7 +57,7 @@ const Home = () => {
         <div className="relative flex justify-center md:justify-end mt-8 md:mt-0">
           <div className="relative">
             <img
-              src="https://res.cloudinary.com/ddei3mzex/image/upload/v1712911719/1690452513365_gaum2x.jpg"
+              src="https://res.cloudinary.com/ddei3mzex/image/upload/v1784806886/dan_ltjts7.png"
               alt="Daniel Muiruri - Software Developer"
               className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-slate-700 shadow-2xl shadow-black/50"
             />
