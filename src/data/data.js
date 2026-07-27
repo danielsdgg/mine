@@ -1,8 +1,26 @@
-import fashions from '../assets/original.jpg';
+import fashions from '../assets/full-logo.png';
 import rs from '../assets/Morgan@1.jpg';
 import insurance from '../assets/nyumbaa.png';
 
 export const data = [
+    {
+    id: 1,
+    name: "INSURANCE WEBSITE",
+    paragraph: "Full-stack app for insurance quotes and policy management. Integrated Spring Boot backend for secure data handling, serving 1k+ quotes monthly with 99% uptime.",
+    image: insurance,
+    github: "https://github.com/danielsdgg",
+    live: "https://www.karendirectins.com/",
+    tech: ["React", "Java (Spring Boot)", "MySQL", "REST APIs"],
+  },
+  {
+    id: 2,
+    name: "DALEON DYNAMICS",
+    paragraph: "A software company website built with Next.js, showcasing services and projects with a responsive design and smooth navigation.",
+    image: fashions,
+    github: "https://github.com/danielsdgg",
+    live: "https://daleondynamics.com/",
+    tech: ["Nextjs",],
+  },
   {
     id: 1,
     name: "Morgan-LMS",
@@ -12,23 +30,6 @@ export const data = [
     live: "https://canvas-1-jxo5.onrender.com",
     tech: ["React", "Java (Spring Boot)", "MySQL", "Tailwind CSS", "API Integration"], 
   },
-  {
-    id: 2,
-    name: "Insurance Website",
-    paragraph: "Full-stack app for insurance quotes and policy management. Integrated Spring Boot backend for secure data handling, serving 1k+ quotes monthly with 99% uptime.",
-    image: insurance,
-    github: "https://github.com/danielsdgg",
-    live: "https://karendirectinsurance.vercel.app",
-    tech: ["React", "Java (Spring Boot)", "MySQL", "REST APIs"],
-  },
-  {
-    id: 3,
-    name: "Fashions Design",
-    paragraph: "E-commerce site with inventory management and payment integration. Used Flask for lightweight backend, optimizing for mobile-first design and fast performance.",
-    image: fashions,
-    github: "https://github.com/danielsdgg",
-    live: "https://herocloth.vercel.app",
-    tech: ["React", "Python (Flask)", "SQLite"],
-  },
-  // Add more here...
+
+
 ];
