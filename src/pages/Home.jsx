@@ -16,7 +16,7 @@ const Home = () => {
             Hello, I'm
           </p>
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight">
-            Daniel Muiruri
+            Daniel Gathigi Muiruri
           </h1>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-300">
             Software Developer
