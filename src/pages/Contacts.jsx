@@ -108,11 +108,11 @@ const Contacts = () => {
               className="flex flex-col items-center lg:items-start gap-4 text-slate-300"
             >
               <a
-                href="mailto:danieldeploys@gmail.com"
+                href="mailto:gathigidg26@gmail.com"
                 className="inline-flex items-center gap-2 text-lg font-medium hover:text-white transition-colors group"
               >
                 <span className="text-cyan-400 group-hover:text-cyan-300">→</span>
-                danieldeploys@gmail.com
+                gathigidg26@gmail.com
               </a>
             </motion.div>
           </div>

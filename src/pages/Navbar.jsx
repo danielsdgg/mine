@@ -41,7 +41,7 @@ const Navbar = () => {
             {/* Logo + Avatar */}
             <div className="flex items-center gap-3">
               <img
-                src="https://res.cloudinary.com/ddei3mzex/image/upload/v1784806886/dan_ltjts7.png"
+                src="/profile.jpg"
                 alt="Daniel Muiruri"
                 className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border-2 border-indigo-500/40 shadow-sm flex-shrink-0"
               />
