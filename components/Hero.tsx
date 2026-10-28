@@ -29,7 +29,7 @@ export default function Hero() {
           View projects
         </a>
         <a
-          href="/Daniel-Gathigi-Muiruri-CV.pdf"
+          href="/Daniel-Muiruri-CV.pdf"
           download
           className="rounded-lg border border-border px-5 py-3 text-sm font-medium hover:bg-surface"
         >

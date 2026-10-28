@@ -1,10 +1,10 @@
-// data/projects.ts
 export type Project = {
   title: string;
   tagline: string;
   description: string;
   stack: string[];
   href: string;
+  image?: string; // e.g. "/projects/daleon.png" (file goes in public/projects/)
 };
 
 export const projects: Project[] = [
@@ -15,14 +15,16 @@ export const projects: Project[] = [
       "Company site for my Nairobi web design and software startup, built entirely with Next.js App Router and designed for search: structured metadata, sitemap, schema markup, service pages and a blog. The contact form saves enquiries to Google Sheets.",
     stack: ["Next.js", "App Router", "SEO", "Google Sheets"],
     href: "https://daleondynamics.com",
+    image: "/daleon.png",
   },
   {
     title: "Tulip Foundation Kenya",
     tagline: "Website for a non-profit",
     description:
       "Website for a Kenyan non-profit supporting education, youth empowerment and families, with programme and story pages, search and social-preview metadata, and a donation and WhatsApp call to action.",
-    stack: ["Next.js"],
+    stack: ["Next.js", "SEO"],
     href: "https://tulipfoundationkenya.com",
+    image: "/tulip.png",
   },
   {
     title: "HeroCloth",
@@ -31,6 +33,7 @@ export const projects: Project[] = [
       "Online store with a product catalogue, add to cart and checkout, plus an admin panel for creating, editing and deleting products. Python backend, React frontend.",
     stack: ["React", "Python"],
     href: "https://herocloth.vercel.app",
+    image: "/herocloth.png",
   },
   {
     title: "Karen Direct Insurance Brokers",
@@ -39,5 +42,6 @@ export const projects: Project[] = [
       "React site for an insurance brokerage. It was scoped as a full-stack app, and we delivered it as a static site to match what the client needed.",
     stack: ["React"],
     href: "https://www.karendirectins.com",
+    image: "/karen-direct.png",
   },
 ];
