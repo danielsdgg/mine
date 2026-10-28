@@ -41,8 +41,8 @@ const Home = () => {
             </ScrollLink>
 
             <a
-              href="/Daniel-Muiruri-Resume-2026.pdf"  
-              download="Daniel-Muiruri-Resume-2026.pdf"  
+              href="/Daniel-Gathigi-Muiruri-CV.pdf"  
+              download="Daniel-Gathigi-Muiruri-CV.pdf"  
               className="inline-block w-full sm:w-auto"
             >
               <button className="group w-full sm:w-auto bg-transparent text-white px-7 py-4 rounded-lg text-lg font-semibold border-2 border-slate-500 hover:border-slate-300 hover:bg-slate-800/50 transition-all duration-300 inline-flex items-center justify-center shadow-md hover:shadow-lg">

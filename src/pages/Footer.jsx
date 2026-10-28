@@ -47,8 +47,8 @@ const Footer = () => {
 
             {/* Prominent Resume CTA */}
             <a
-              href="/Daniel-Muiruri-Resume-2026.pdf"
-              download="Daniel-Muiruri-Resume-2026.pdf"
+              href="/Daniel-Gathigi-Muiruri-CV.pdf"
+              download="Daniel-Gathigi-Muiruri-CV.pdf"
               className="group inline-flex items-center gap-3 px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-base rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               aria-label="Download my resume as PDF"
             >
