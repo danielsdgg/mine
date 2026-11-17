@@ -2,6 +2,7 @@ import Image from "next/image";
 
 const links = [
   { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
   { href: "#contact", label: "Contact" },
 ];
@@ -18,9 +19,9 @@ export default function Header() {
             height={36}
             className="h-9 w-9 rounded-full border border-border object-cover"
           />
-          Daniel Muiruri
+          <span className="hidden sm:inline">Daniel Muiruri</span>
         </a>
-        <nav className="flex gap-6 text-sm text-muted">
+        <nav className="flex gap-4 text-sm text-muted sm:gap-6">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="hover:text-foreground">
               {l.label}

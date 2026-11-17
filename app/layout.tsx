@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://danielmuiruri.vercel.app"),
   title: "Daniel Muiruri | Full-Stack Developer",
   description,
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/daniel.jpg",
     apple: "/daniel.jpg",
@@ -21,7 +24,11 @@ export const metadata: Metadata = {
     url: "https://danielmuiruri.vercel.app",
     siteName: "Daniel Muiruri",
     type: "website",
-    images: ["/daniel.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Daniel Muiruri | Full-Stack Developer",
+    description,
   },
 };
 
