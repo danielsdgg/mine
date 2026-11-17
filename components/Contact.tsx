@@ -12,7 +12,7 @@ export default function Contact() {
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a
-            href="mailto:gathigdg26@gmail.com"
+            href="mailto:gathigidg26@gmail.com"
             className="rounded-lg bg-accent px-5 py-3 text-sm font-medium text-accent-foreground hover:opacity-90"
           >
             Email me
