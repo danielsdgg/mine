@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://danielmuiruri.vercel.app"),
   title: "Daniel Muiruri | Full-Stack Developer",
   description,
+  verification: {
+    google: "VRTJdWsdoopv_exGFYjYkOF-vdVduo27O8AEJUVl-Vo",
+  },
   alternates: {
     canonical: "/",
   },
